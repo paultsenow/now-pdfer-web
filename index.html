@@ -11,10 +11,47 @@
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <title>NOW PDFer</title>
     <meta name="description" content="A fast, private PDF editor. Everything runs on your device." />
-    <script type="module" crossorigin src="./assets/index-u4QXBTG0.js"></script>
+    <script type="module" crossorigin src="./assets/index-n3_wwT25.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-CvYOuDya.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Instant splash: visible the moment the webview paints, replaced when
+           React mounts. Keeps a cold start from looking like a hung app. -->
+      <div
+        style="
+          position: fixed;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          background: #f8fafc;
+          color: #64748b;
+          font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+          font-size: 14px;
+        "
+      >
+        <div
+          style="
+            width: 28px;
+            height: 28px;
+            border: 3px solid #cbd5e1;
+            border-top-color: #3b66f5;
+            border-radius: 50%;
+            animation: nowpdfer-spin 0.8s linear infinite;
+          "
+        ></div>
+        Opening NOW PDFer…
+      </div>
+      <style>
+        @keyframes nowpdfer-spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      </style>
+    </div>
   </body>
 </html>
